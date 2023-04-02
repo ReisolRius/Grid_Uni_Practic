@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header p {
+    color: #000;
+    font-size: 1.3em;
+    padding: .5em 2em;
+    border-radius: .5em;
+    transition: .2s;
+}
+
+header p:hover {
+    background-color: #f1f1f1;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.simple-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 330px);
+    justify-content: center;
+}
+
+.simple_item {
+    margin: .5em;
+}
+
+.simple_item img {
+    width: 100%;
+}
+
+.simple_text {
+    background-color: #000;
+    width: 100%;
+    border-radius: .5em;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em;
+}
+
+.simple_text img {
+    width: 8%;
+}
+
+.dif_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'pic1 pic2 pic2'
+    'pic3 pic3 pic4';
+}
+
+.dif_item {
+    margin: .5em;
+    color: #000;
+    position: relative;
+}
+
+.dif_1 {
+    grid-area: pic1;
+}
+
+.dif_2 {
+    grid-area: pic2;
+}
+
+.dif_3 {
+    grid-area: pic3;
+}
+
+.dif_4 {
+    grid-area: pic4;
+}
+
+.dif_item p {
+    color: #fff;
+    font-size: 1em;
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+}
+
+.dif_item img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #a1a1a1;
+}
+
+footer p {
+    padding: .5em 1em;
+}
+
+.footer_img {
+    width: 100%;
+}
+
+.footer_img img {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 1.3em;
+    display: none;
+}
+
+.header_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.header_menu p {
+    padding: 1em 2em;
+}
+
+.header_menu p:hover {
+    background-color: #ececec;
+    border: .5em;
+}
+
+.header_height {
+    height: 250px;
+    transition: .3s;
+}
+
+@media screen and (max-width: 680px) {
+    header {
+        display: none;
+    }
+    .simple-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .simple_text p {
+        font-size: .8em;
+    }
+
+    .simple-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dif_grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:        
+        'pic1'
+        'pic2'
+        'pic3'
+        'pic4';
+    }
+}
